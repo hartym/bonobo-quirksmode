@@ -27,26 +27,25 @@ def set_output_fields(fields, typename='Bag'):
 
 def use_output_type(f):
     def _use_output_type_context_processor(self, context):
-        yield (context.output_type,)
+        yield (context.output_type, )
 
     return use_context_processor(_use_output_type_context_processor)(f)
 
 
-@use_output_type
-@set_output_fields(['a', 'b'])
-def x(OutputType):
-    yield OutputType(
-        a=1,
-        b=2,
-    )
-    yield OutputType(
-        b=3,
-        a=4,
-    )
-
-
 if __name__ == '__main__':
     import bonobo, mondrian
+
+    @use_output_type
+    @set_output_fields(['a', 'b'])
+    def x(OutputType):
+        yield OutputType(
+            a=1,
+            b=2,
+        )
+        yield OutputType(
+            b=3,
+            a=4,
+        )
 
     mondrian.term.istty = True
     graph = bonobo.Graph(

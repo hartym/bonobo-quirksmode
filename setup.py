@@ -43,9 +43,8 @@ else:
 setup(
     author='Romain Dorgueil',
     author_email='romain@dorgueil.net',
-    description=
-    ('Some quirks workarounds I do not want to push in the main repo (yet, or '
-     'maybe never).'),
+    description=('Some quirks workarounds I do not want to push in the main repo (yet, or '
+                 'maybe never).'),
     license='Apache License, Version 2.0',
     name='bonobo_quirksmode',
     version=version,
@@ -55,10 +54,7 @@ setup(
     include_package_data=True,
     install_requires=['bonobo (~= 0.6.0)'],
     extras_require={
-        'dev': [
-            'coverage (>= 4.4, < 5.0)', 'pytest (>= 3.1, < 4.0)',
-            'pytest-cov (>= 2.5, < 3.0)', 'yapf'
-        ]
+        'dev': ['coverage (>= 4.4, < 5.0)', 'pytest (>= 3.1, < 4.0)', 'pytest-cov (>= 2.5, < 3.0)', 'yapf']
     },
     url='',
     download_url=''.format(version=version),
