@@ -1,9 +1,11 @@
 -e .[dev]
-attrs==17.4.0
-coverage==4.4.2
+-r requirements.txt
+attrs==18.1.0
+coverage==4.5.1
+more-itertools==4.1.0
 pluggy==0.6.0
-py==1.5.2
+py==1.5.3
 pytest-cov==2.5.1
-pytest==3.3.2
+pytest==3.5.1
 six==1.11.0
-yapf==0.20.1
+yapf==0.22.0
